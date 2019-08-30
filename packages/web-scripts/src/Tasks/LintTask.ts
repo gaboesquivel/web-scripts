@@ -9,6 +9,7 @@ import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
 
+// based on https://github.com/kentcdodds/kcd-scripts/blob/17354e6c8f7af8899d5aa0b9dea68291d52eef31/src/scripts/lint.js#L11-L15
 export function getEslintConfig(): string | null {
   if (
     !existsSync(join(CONSUMING_ROOT, '.eslintrc')) &&
